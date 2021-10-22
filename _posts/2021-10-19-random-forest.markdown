@@ -3,6 +3,7 @@ layout: post
 title:  "Random Forest"
 date:   2021-10-18 15:58:02 +0530
 categories: jekyll update
+usemathjax: true
 ---
 
 ### AdaBoost
@@ -12,10 +13,23 @@ AddBoost:
 - In AddaBoost each observation  is classifed into Stump. Stump is nothing but a tree have only one root node and one 2 leafe node
 
 Following are the algorithm steps:
-1. Assign equal weight for each observation. 
- > $$ weight  $$
-2
+1. Assign equal weight for each observation.
+   >
+   <img src="https://render.githubusercontent.com/render/math?math=Weight = \frac{1}{Total\,  number\, of\,  sample}">
+  
+   **Note**: During first iteration all observation gets equal weight
+2. Build Stump for each observation in the dataset
+   Building Stump is nothing building a decision tree
+   
+3. Calculate the toatl erorr for each stump
+   <img src="https://render.githubusercontent.com/render/math?math=Total\, error = \ Sum\ of\ weight\ of incorrectly\ calssifed\ observation">
 
+4. Calculate the amount of Say
+   This step will determine how much say each stump plays role in final classificaiton 
+
+
+
+  
 1. Train the decision stump on the initial dataset with no weights (the same as each element having weight = 1).
 
 2. Update weights of all elements, using the formula from AdaBoost algorithm. Weights of correctly classified elements should become less, weights of incorrectly classified - larger.
